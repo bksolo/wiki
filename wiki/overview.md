@@ -1,6 +1,6 @@
 ---
 type: synthesis
-tags: [home-automation, netzwerk, ki, workflow, disaster-recovery]
+tags: [netzwerk, ki, workflow, disaster-recovery]
 created: 2026-04-07
 updated: 2026-04-07
 ---
@@ -11,7 +11,6 @@ Dieses Wiki ist Brunos persönliche Wissensbasis — ein "Second Brain", das von
 
 ## Fachgebiete
 
-- **[[home-automation|Home-Automation]]** — Home Assistant, Sensoren, Aktoren, Automatisierungen
 - **[[netzwerk|Netzwerk-Infrastruktur]]** — Sicheres Heimnetz, Camper-Netzwerk, VLANs, Firewall
 - **[[ki|KI & Claude Code]]** — LLM-Projekte, RAG, Prompt Engineering
 - **[[workflow|Workflow-Automatisierung]]** — N8N, Shell-Skripte, Systemintegration
@@ -27,5 +26,5 @@ Dieses Wiki folgt dem [[llm-wiki-pattern]], beschrieben von [[andrej-karpathy]].
 
 ### Nächste Schritte
 
-- Weitere Quellen zu Home Assistant Automationen, VLAN-Setup, oder KI-Projekten einpflegen
+- Weitere Quellen zu Netzwerk, KI-Projekten oder Workflow-Automatisierung einpflegen
 - Bei ~10 Quellen: ersten Lint-Durchlauf starten

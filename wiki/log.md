@@ -22,3 +22,8 @@
 - Erstellt: marp.md (Entity — Slide-Deck-Format)
 - Index aktualisiert: 7 Entities, 3 Concepts, 2 Sources
 - Overview aktualisiert
+
+## [2026-04-07] update | Home-Automation entfernt
+- Gelöscht: home-assistant.md (Entity ohne Quellen)
+- Tag `home-automation` aus Schema, Overview und Index entfernt
+- Domain wird in diesem Wiki nicht behandelt

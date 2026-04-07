@@ -64,7 +64,6 @@ updated: YYYY-MM-DD
 ### Tags
 
 Core domain tags (extensible):
-- `home-automation`
 - `netzwerk`
 - `ki`
 - `workflow`

@@ -7,7 +7,6 @@ updated: 2026-04-07
 
 ## Entities
 - [[andrej-karpathy]] — KI-Forscher, Urheber des LLM-Wiki-Patterns (1 Quelle)
-- [[home-assistant]] — Open-Source Home-Automation-Plattform
 - [[marp]] — Markdown-basiertes Slide-Deck-Format (1 Quelle)
 - [[obsidian]] — Markdown-Wissensmanager, Frontend für dieses Wiki (1 Quelle)
 
