@@ -136,6 +136,65 @@ Check for:
 
 Report findings, suggest fixes, apply with user approval.
 
+### Todo
+
+Tracking-Datei: `todos.md` (root level, nicht in `wiki/`, nicht im Frontend).
+
+Triggered when: user says "todo", "aufgabe", "mach mal", "erinnere mich", or similar.
+
+Commands:
+- **"Todo: XYZ"** — Add a new todo to "Offen" with timestamp
+- **"Was steht an?"** / **"Todos"** — Read and summarize open/in-progress todos
+- **"Todo erledigt: XYZ"** — Move todo to "Erledigt" with completion timestamp
+- **"Starte: XYZ"** — Move todo from "Offen" to "In Arbeit" with timestamp
+
+Entry format:
+```markdown
+- [ ] `[2026-04-07 18:30]` Beschreibung
+- [x] `[2026-04-07 18:30]` ~~Beschreibung~~ — erledigt `[2026-04-07 19:45]`
+```
+
+Rules:
+- Always add timestamp when creating or updating entries
+- When completing: check the box, strikethrough the text, add completion timestamp
+- Move completed items to "Erledigt" section
+- Keep "Offen" and "In Arbeit" sections sorted by date (oldest first)
+- On reminder loops: read todos.md and report overdue or stale items
+
+### Projekt
+
+Tracking-Datei: `projekte.md` (root level, nicht in `wiki/`, nicht im Frontend).
+
+Triggered when: user says "projekt", "project", or references ongoing work.
+
+Commands:
+- **"Neues Projekt: XYZ"** — Add to "Geplant" or "Aktiv" with timestamp and description
+- **"Projektstatus"** — Read and summarize all active/planned projects
+- **"Projekt abgeschlossen: XYZ"** — Move to "Abgeschlossen" with completion timestamp
+
+Entry format:
+```markdown
+### Projektname
+- **Status:** Aktiv | Geplant | Abgeschlossen
+- **Gestartet:** 2026-04-07
+- **Beschreibung:** Kurzbeschreibung
+- **Notizen:**
+  - `[2026-04-07]` Notiz oder Fortschritt
+```
+
+Rules:
+- Each project gets its own H3 heading under the appropriate section
+- Add timestamped notes for progress updates
+- When completing: move entire block to "Abgeschlossen", add completion date
+- Projects can reference wiki pages via [[Wikilinks]] for context
+
+### Reminder (Loop)
+
+The user can set up periodic reminders using `/loop`. When reminded:
+1. Read `todos.md` — report items in "Offen" older than 3 days, and items in "In Arbeit"
+2. Read `projekte.md` — report active projects without recent updates (>7 days)
+3. Keep it brief: just the actionable items, not the full file
+
 ## index.md Convention
 
 The index is the LLM's primary navigation tool. Structure:
