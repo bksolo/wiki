@@ -1,0 +1,6 @@
+.obsidian/
+.claude/
+node_modules/
+.quartz-cache/
+public/
+*.base

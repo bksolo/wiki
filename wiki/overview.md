@@ -19,10 +19,13 @@ Dieses Wiki ist Brunos persönliche Wissensbasis — ein "Second Brain", das von
 
 ## Status
 
-Wiki gerade initialisiert. Noch keine Quellen verarbeitet.
+1 Quelle verarbeitet, 6 Wiki-Seiten erstellt (Stand: 2026-04-07).
 
-## Nächste Schritte
+### KI & Methodik
 
-1. Erste Quelle in `raw/` ablegen
-2. Ingest durchführen
-3. Ergebnisse in Obsidian prüfen
+Dieses Wiki folgt dem [[llm-wiki-pattern]], beschrieben von [[andrej-karpathy]]. Kernidee: LLM kompiliert und pflegt ein Markdown-Wiki inkrementell — statt Wissen bei jeder Frage neu via [[rag]] zusammenzusetzen. [[Obsidian]] dient als Frontend, [[marp]] als optionales Output-Format.
+
+### Nächste Schritte
+
+- Weitere Quellen zu Home Assistant Automationen, VLAN-Setup, oder KI-Projekten einpflegen
+- Bei ~10 Quellen: ersten Lint-Durchlauf starten

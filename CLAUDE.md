@@ -108,6 +108,9 @@ Workflow:
 
 A single ingest may touch 5-15 wiki pages. That's expected.
 
+8. Git commit: `git add -A && git commit -m "ingest: <Source Title>"`
+9. Git push: `git push origin master`
+
 ### Query
 
 Triggered when: user asks a question about the wiki's knowledge.
@@ -179,6 +182,29 @@ Parseable with: `grep "^## \[" wiki/log.md | tail -5`
 - Frontmatter is Dataview-compatible (type, tags, sources, created, updated)
 - Graph View is the primary way to visualize wiki structure
 - Obsidian Web Clipper saves articles directly to `raw/`
+
+## Version Control & Deployment
+
+Every operation that changes wiki content ends with a git commit and push.
+
+### Commit Message Format
+
+- `ingest: <Title>` — after ingesting a source
+- `query: <Title>` — after saving a query result as wiki page
+- `lint: <Date>` — after a lint pass
+- `update: <Description>` — after manual updates or deletions
+
+### Deployment Pipeline
+
+Push to `master` triggers GitHub Actions → Quartz builds HTML from `wiki/` → GitHub Pages deploys.
+
+- Repo: `https://github.com/bksolo/wiki` (private)
+- Site: `https://bksolo.github.io/wiki/`
+- Local preview: `npx quartz build --directory wiki --serve`
+
+### .gitignore
+
+`.obsidian/`, `.claude/`, `node_modules/`, `.quartz-cache/`, `public/`, `*.base` are excluded from version control.
 
 ## Workflow Tips
 
