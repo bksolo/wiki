@@ -1,5 +1,13 @@
 # Log
 
+## [2026-04-08] ingest | Gemma 4 via Ollama
+- Quelle: raw/gemma4.md (Ollama-Library-Eintrag)
+- Erstellt: source-gemma-4-ollama.md (Zusammenfassung)
+- Erstellt: gemma-4.md (Entity — lokale Modellfamilie)
+- Erstellt: ollama.md (Entity — lokale Modell-Laufzeit)
+- Index aktualisiert
+- Overview aktualisiert
+
 ## [2026-04-07] init | Wiki erstellt
 - CLAUDE.md Schema angelegt
 - Verzeichnisstruktur: raw/, wiki/, output/
